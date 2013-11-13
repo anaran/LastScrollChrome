@@ -7,13 +7,11 @@
     div.style.background = lastStyle.color;
     div.style.color = lastStyle.backgroundColor;
     div.style.fontSize = "xx-large";
-    div.title = "reading aid";
+    div.title = chrome.i18n.getMessage('extension_name') + "\n" + chrome.i18n.getMessage('extension_description');
     div.style.padding = "3px";
     div.style.borderRadius = "3px";
     div.style.opacity = 0.2;
-    div.style.left = (window.scrollX + window.innerWidth) + "px";
-    div.style.top = window.scrollY + "px";
-    div.className = "readingAid";
+    div.className = "lastScroll";
     if (div.parentElement) {
         document.body.removeChild(div);
     }

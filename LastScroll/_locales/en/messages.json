@@ -4,7 +4,7 @@
         "description": "The title of the extension, displayed in the web store."
     },
     "extension_description": {
-        "message": "Schows position after scrolling (by line ->, or by page =>) for better reading continuity.",
+        "message": "Shows position after scrolling (by line ->, or by page =>) for better reading continuity.",
         "description":"The description of the extension, displayed in the web store."
     }
 }
