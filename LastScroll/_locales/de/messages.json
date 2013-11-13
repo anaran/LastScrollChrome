@@ -1,0 +1,10 @@
+{
+    "extension_name": {
+        "message": "Last Scroll",
+        "description": "The title of the extension, displayed in the web store."
+    },
+    "extension_description": {
+        "message": "Zeigt die Position nach dem Rollen (um Zeile ->, oder um Seite =>) zum schnelleren weiterlesen an.",
+        "description":"The description of the extension, displayed in the web store."
+    }
+}
