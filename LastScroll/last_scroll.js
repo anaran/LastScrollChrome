@@ -3,6 +3,7 @@
     var lastStyle = window.getComputedStyle(document.body);
     var div = document.createElement('div');
     div.style.position = "absolute";
+    //    div.style.opacity = 0.7;
     div.style.fontSize = "xx-large";
     div.title = chrome.i18n.getMessage('extension_name') + "\n" + chrome.i18n.getMessage('extension_description');
     div.style.padding = "3px";
@@ -33,15 +34,11 @@
                 div.style.top = (document.body.scrollTop) + "px";
             } else {
                 div.innerHTML = "&DownArrow;";
-                div.style.top = (document.body.scrollTop) + "px";
+                div.style.top = (lastScrollTop + document.body.clientHeight) + "px";
             }
 
         }
-        div.style['transition'] = '';
         document.body.appendChild(div);
-        div.style.opacity = 1;
-        div.style['transition'] = 'opacity 3s';
-        div.style.opacity = 0.1;
         //         window.scrollTo(div.getBoundingClientRect().left, div.getBoundingClientRect().top);
         //        console.log(JSON.stringify(document.body, [
         //            'clientHeight', 'clientLeft', 'clientTop', 'clientWidth',
