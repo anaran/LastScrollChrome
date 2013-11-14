@@ -44,3 +44,6 @@ These are created using http://en.wikipedia.org/wiki/Scrolling and sizing chrome
 `Inspect element` is useful to display the size while adjusting the chrome window.
 
 Use e.g. the `Capture Visible Tab` feature of Chrome extension `Autosave Text` to create a PNG image of the page and save it with `Ctrl`+`S`.
+
+The screenshots are all [here](.).
+
