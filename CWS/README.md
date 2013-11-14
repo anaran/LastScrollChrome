@@ -2,7 +2,7 @@ Last Scroll Publishing in Chrome Web Store
 ====
 These are developer instructions, users don't need to know about this.
 
-[Last Scroll - Overview](https://chrome.google.com/webstore/detail/last-scroll/mceojjfcjklcpbdkagkjhoinaagcidnd) is all there is to know about this mini extension.
+[Last Scroll - Overview](https://chrome.google.com/webstore/detail/last-scroll/mceojjfcjklcpbdkagkjhoinaagcidnd) is all there is to know to use this mini extension.
 
 Publishing
 ----
