@@ -30,10 +30,10 @@
         } else {
             // TODO Please note we are scrolling by line here.
             if (scrollingUp) {
-                div.innerHTML = "&UpArrow;";
+                div.innerHTML = "&Uarr;";
                 div.style.top = (document.body.scrollTop) + "px";
             } else {
-                div.innerHTML = "&DownArrow;";
+                div.innerHTML = "&Darr;";
                 div.style.top = (lastScrollTop + document.body.clientHeight) + "px";
             }
 
