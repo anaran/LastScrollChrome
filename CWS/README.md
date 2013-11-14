@@ -1,4 +1,4 @@
-Chrome Web Store
+Last Scroll Publishing in Chrome Web Store
 ====
 These are developer instructions, users don't need to know about this.
 
