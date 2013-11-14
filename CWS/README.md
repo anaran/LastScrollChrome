@@ -47,3 +47,11 @@ Use e.g. the `Capture Visible Tab` feature of Chrome extension `Autosave Text` t
 
 The screenshots are all [here](.).
 
+Websites
+----
+**Link to website for your item (optional)** points to
+https://github.com/anaran/LastScrollChrome
+
+**Link to support & FAQ for your item (optional)** points to
+https://github.com/anaran/LastScrollChrome/issues
+
