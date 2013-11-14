@@ -1,6 +1,11 @@
 Chrome Web Store
 ====
+These are developer instructions, users don't need to know about this.
 
+[Last Scroll - Overview](https://chrome.google.com/webstore/detail/last-scroll/mceojjfcjklcpbdkagkjhoinaagcidnd) is all there is to know about this mini extension.
+
+Publishing
+----
 Go to https://chrome.google.com/webstore/developer/edit/mceojjfcjklcpbdkagkjhoinaagcidnd to edit this extension in the CWS developer dashboard.
 
 Export folder `LastScroll` from [LastScrollChrome](..) as ZIP file (in *eclipse orion* use `Actions`->`Export as zip`) and use this to `Upload Updated Package`.
