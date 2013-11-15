@@ -1,18 +1,27 @@
 (function() {
     // TODO See http://developer.chrome.com/extensions/runtime.html#event-onInstalled
     chrome.runtime.onInstalled.addListener(function(details) {
-        switch (details.reason) {
-            case "install":
-                window.alert(Date() + '\n\nWelcome to this new ' + details.reason + ' of '+chrome.app.getDetails().name+' version ' + chrome.app.getDetails().version + '\n' + (chrome.runtime.lastError ? chrome.runtime.lastError : ''));
-                break;
-            case "update":
-                window.alert(Date() + '\n\n'+chrome.app.getDetails().name+' got an ' + details.reason + ' from version ' + details.previousVersion + ' to ' + chrome.app.getDetails().version + '\n' + (chrome.runtime.lastError ? chrome.runtime.lastError : ''));
-                break;
-            case "chrome_update":
-                window.alert(Date() + '\n\n'+chrome.app.getDetails().name+' witnessed a ' + details.reason + ' to version ' + navigator.userAgent + '\n' + (chrome.runtime.lastError ? chrome.runtime.lastError : ''));
-                break;
+        try {
+            switch (details.reason) {
+                case "install":
+                    window.alert(chrome.i18n.getMessage('alert_install', [
+                    Date(), details.reason, chrome.app.getDetails().name, chrome.app.getDetails().version, (chrome.runtime.lastError ? chrome.runtime.lastError : '')]));
+                    break;
+                case "update":
+                    window.alert(chrome.i18n.getMessage('alert_update', [
+                    Date(), chrome.app.getDetails().name, details.reason, details.previousVersion, chrome.app.getDetails().version, (chrome.runtime.lastError ? chrome.runtime.lastError : '')]));
+                    break;
+                case "chrome_update":
+                    window.alert(chrome.i18n.getMessage('alert_chrome_update', [
+                    Date(), chrome.app.getDetails().name, details.reason, navigator.userAgent, (chrome.runtime.lastError ? chrome.runtime.lastError : '')]));
+                    break;
+            }
+        } catch (exception) {
+            if (window.confirm('An exception has occured in extension ' + chrome.app.getDetails().name + '\n\nSubmit this issue at https://github.com/anaran/LastScrollChrome/issues now?')) {
+                window.prompt('Please copy the string below, as is, into the new issue after you supply title and comments.', JSON.stringify(exception.stack));
+                window.open('https://github.com/anaran/LastScrollChrome/issues/new', '_blank');
+            }
         }
-        //window.alert('Following installation has just occured:\n\n' + JSON.stringify(details, null, 2) + '\n' + JSON.stringify(chrome.app.getDetails(), ['version'], 2) + '\n' + (chrome.runtime.lastError ? chrome.runtime.lastError : ''));
     });
 })();
 //Sample alert content in M33. The alert title is not part of the content copied by Ctrl+A Ctrl+C
