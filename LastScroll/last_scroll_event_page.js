@@ -25,6 +25,10 @@
     });
 })();
 //Sample alert content in M33. The alert title is not part of the content copied by Ctrl+A Ctrl+C
+//Fri Nov 15 2013 01:57:04 GMT+0100 (Westeuropäische Normalzeit)Last Scroll got an update from version 6 to 7
+//Fri Nov 15 2013 01:50:28 GMT+0100 (Westeuropäische Normalzeit)Last Scroll hat ein update von Version 6 auf 7 erhalten
+//Fri Nov 15 2013 01:49:53 GMT+0100 (Westeuropäische Normalzeit)Last Scroll witnessed a chrome_update to version Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36
+//Fri Nov 15 2013 01:44:40 GMT+0100 (Westeuropäische Normalzeit)Last Scroll witnessed a chrome_update to version Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1709.2 Safari/537.36
 //Wed Nov 13 2013 23:29:19 GMT+0100 (Westeuropäische Normalzeit)We got an update from version 4 to 5
 //We got an update from version 3 to 4
 //Welcome to this new install of version 4
