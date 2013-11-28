@@ -16,17 +16,18 @@ Work on a Bug or Feature
 Start working on a branch right away.
 
 ```
+git remote add upstream https://github.com/anaran/LastScrollChrome.git
 git checkout master
-git pull origin master
+git pull upstream master
 git checkout -B BugOrFeature master # Create and switch to the BugOrFeature branch starting at master.
 ```
 
-Make all the edits you needs.
+Make all the edits you need to make, and test them, commit them frequently.
 
 Regularly rebase to pick up latest work:
 
 ```
-git pull origin master
+git pull upstream master
 ```
 
 Prepare Delivery Branch
