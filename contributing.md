@@ -1,27 +1,32 @@
-Work on a Bug or Feature
-====
-
 Motivation
 ----
 
-These command-line innstructions are just meant to highlight the steps in the process.
+A lot of effort is wasted between maintainers and contributors on reworking pull request which are difficult to review and would clutter the upstream commit history.
 
-Especially the creation of a clean pull request without rewriting
-(= destroying) your development branch history is something I wanted to share.
+Especially the creation of a clean pull request **without rewriting
+(= destroying) your development branch history** is something I wanted to share.
 
-Start Work on a Branch
+These command-line instructions are just meant to highlight the steps in the process.
+
+They assume you are working in a local git clone where origin is your github repo and upstream is my github repo.
+
+Work on a Bug or Feature
 ----
 
+Start working on a branch right away.
+
 ```
-git checkout -B BugOrFeature master
+git checkout master
+git pull origin master
+git checkout -B BugOrFeature master # Create and switch to the BugOrFeature branch starting at master.
 ```
 
 Make all the edits you needs.
 
-Regularily rebase to pick up latest work:
+Regularly rebase to pick up latest work:
 
 ```
-git rebase origin master
+git pull origin master
 ```
 
 Prepare Delivery Branch
@@ -33,14 +38,18 @@ Create a delivery branch and merge a squashed version of your BugOrFeature commi
 
 ```
 git checkout master
+git pull origin master
 git status # all clean
-git checkout -B DeliverBugOrFeature master
-git merge --squash BugOrFeature
-git status # looks good
-git commit # review and commit via emacs
-# git log --graph --abbrev-commit --stat --pretty --decorate=full --branches
+git checkout -B DeliverBugOrFeature master # Create and switch to DeliverBugOrFeature
+git merge --squash BugOrFeature # merge to DeliverBugOrFeature, but don't commit!
+git status # Verify all looks good
+git commit # review and commit using your favorite EDITOR
+# git log --graph --abbrev-commit --stat --pretty --decorate=full --branches (if you like)
 git push --all -v # push your work to your github repo
 ```
 
-Open a `New Pull Request` and specify to merge from `DeliverBugOrFeature` to my `master` branch.
+Open `New Pull Request`
+----
+
+Finally, open a `New Pull Request` and specify to merge from `DeliverBugOrFeature` to my `master` branch.
 
