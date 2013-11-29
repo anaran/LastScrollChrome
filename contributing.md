@@ -1,7 +1,7 @@
 Motivation
 ----
 
-A lot of effort is wasted between maintainers and contributors on reworking pull request which are difficult to review and would clutter the upstream commit history.
+A lot of effort is wasted between maintainers and contributors on reworking pull requests which are difficult to review and would clutter the upstream commit history.
 
 Especially the creation of a clean pull request **without rewriting
 (= destroying) your development branch history** is something I wanted to share.
