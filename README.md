@@ -5,4 +5,4 @@ LastScrollChrome
 
 See [CWS/README.md](CWS/README.md)
 
-See also [contributing.md]
+See also [contributing.md](contributing.md)
