@@ -1,3 +1,7 @@
+// From:(\d+(\.\d+)?):To:'$1':
+/*jslint browser: true, devel: true, todo: true */
+/*global navigator: false, window: false, chrome: false, console: false, document: false */
+"use strict"; //$NON-NLS-0$
 (function() {
     var loading = "loading started at " + new Error().stack.split(/\s+/)[2] + "\n(" + (chrome.app.getDetails() && chrome.app.getDetails().name || "no chrome.app.getDetails()") + ") takes";
     console.time(loading);
@@ -22,6 +26,9 @@
             return document.elementFromPoint((element.getBoundingClientRect().right + element.getBoundingClientRect().left) / 2, (element.getBoundingClientRect().top + element.getBoundingClientRect().bottom) / 2);
         }
         div.className = "lastScroll";
+        div.addEventListener('click', function(event) {
+            event.target.style.opacity = (event.target.style.opacity === '1' ? '0' : '1');
+        }, false);
         if (div.parentElement) {
             document.body.removeChild(div);
         }
@@ -51,6 +58,7 @@
                 }
             }
             document.body.appendChild(div);
+            div.style.opacity = '1';
             // I ever get numeric zIndex, so I have to succumb to try getting in front iteratively.
             // var otherZindex = Number(window.getComputedStyle(who).zIndex);
             for (var zIndex = 1, who = whoIsInFrontOf(div); who && who !== div && zIndex <= 10000; zIndex *= 10) {

@@ -1,4 +1,7 @@
 (function() {
+    /*jslint browser: true, devel: true, todo: true */
+    /*global  document: false, navigator: false, window: false, console: false, chrome: false, */
+        'use strict';
     var loading = "loading started at " + new Error().stack.split(/\s+/)[2] + "\n(" + (chrome.app.getDetails() && chrome.app.getDetails().name || "no chrome.app.getDetails()") + ") takes";
     console.time(loading);
     //TODO Place following code where timed section should end.
