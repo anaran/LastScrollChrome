@@ -45,7 +45,7 @@ git checkout -B DeliverBugOrFeature master # Create and switch to DeliverBugOrFe
 git merge --squash BugOrFeature # merge to DeliverBugOrFeature, but don't commit!
 git status # Verify all looks good
 git commit # review and commit using your favorite EDITOR
-# git log --graph --abbrev-commit --stat --pretty --decorate=full --branches (if you like)
+git log --graph --abbrev-commit --stat --pretty --decorate=full --branches --source # poor man's github network graph
 git push --all -v # push your work to your github repo
 ```
 
