@@ -54,4 +54,4 @@ git push --all -v # push your work to your github repo
 
 Finally, open a `New Pull Request` and specify to merge from `DeliverBugOrFeature` to my `master` branch.
 
-Make sure to include "Fixes #*issue number*." in your git commit message when it [fixes a certain issue (bug or feature)](https://help.github.com/articles/closing-issues-via-commit-messages).
+Make sure to include `Fixes #`_issue number_`.` in your git commit message when it [fixes a certain issue (bug or feature)](https://help.github.com/articles/closing-issues-via-commit-messages).
