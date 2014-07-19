@@ -1,17 +1,17 @@
-Motivation
-----
+# Creation of a clean Pull Request
+
+## Motivation
 
 A lot of effort is wasted between maintainers and contributors on reworking pull requests which are difficult to review and would clutter the upstream commit history.
 
-Especially the creation of a clean pull request **without rewriting
-(= destroying) your development branch history** is something I wanted to share.
+Especially the creation of a clean pull request **without ~~rewriting~~ destroying your development branch history** is something I wanted to share.
 
 These command-line instructions are just meant to highlight the steps in the process.
 
 They assume you are working in a local git clone where origin is your github repo and upstream is my github repo.
 
-Work on a Bug or Feature
-----
+## Work on a Bug or Feature
+
 
 Start working on a branch right away.
 
@@ -30,8 +30,8 @@ Regularly rebase to pick up latest work:
 git pull upstream master
 ```
 
-Prepare Delivery Branch
-----
+## Prepare Delivery Branch
+
 
 Once you are happy with your contribution...
 
@@ -49,8 +49,9 @@ git log --graph --abbrev-commit --stat --pretty --decorate=full --branches --sou
 git push --all -v # push your work to your github repo
 ```
 
-Open `New Pull Request`
-----
+## Open `New Pull Request`
+
 
 Finally, open a `New Pull Request` and specify to merge from `DeliverBugOrFeature` to my `master` branch.
 
+Make sure to include "Fixes #*issue number*." in your git commit message when it [fixes a certain issue (bug or feature)](https://help.github.com/articles/closing-issues-via-commit-messages).
